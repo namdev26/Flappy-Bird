@@ -1,18 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class FlyBehavior : MonoBehaviour
+
+public class FlyBehavior : NamMonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float _velocity = 1.5f;
+    [SerializeField] private Rigidbody2D _rb;
+    [SerializeField] private float _rotationSpeed = 10f;
+    protected override void LoadComponent()
     {
-        
+        base.LoadComponent();
+        this.LoadRigidBody2D();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LoadRigidBody2D()
     {
-        
+        if (this._rb != null) return;
+        this._rb = this.GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        this.Move();
+    }
+
+    private void FixedUpdate()
+    {
+        this.Rotate();
+    }
+
+    private void Move()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            _rb.velocity = Vector2.up * _velocity;
+        }
+    }
+
+    private void Rotate()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, _rb.velocity.y * _rotationSpeed);
     }
 }
