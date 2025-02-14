@@ -30,7 +30,11 @@ public class FlyBehavior : NamMonoBehaviour
     }
     private void Move()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        // if (Touchscreen.current.)
+        // {
+        //     _rb.velocity = Vector2.up * _velocity;
+        // }
+        if (Input.touchCount > 0)
         {
             _rb.velocity = Vector2.up * _velocity;
         }
