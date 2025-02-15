@@ -6,8 +6,8 @@ public class PipeSpawner : NamMonoBehaviour
 {
     [SerializeField] private float _timer = 0f;
     [SerializeField] private GameObject _pipe;
-    [SerializeField] private float _heightRange = 0.45f;
-    [SerializeField] private float _maxTime = 1.5f;
+    [SerializeField] private float _heightRange = 1f;
+    [SerializeField] private float _maxTime = 2f;
 
     private void Start()
     {

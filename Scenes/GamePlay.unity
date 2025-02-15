@@ -1193,7 +1193,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.65
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1319,8 +1319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timer: 0
   _pipe: {fileID: 2216390537420673, guid: 98381b43a76d9d24bb71697cc49b96ec, type: 3}
-  _heightRange: 0.3
-  _maxTime: 1.5
+  _heightRange: 1
+  _maxTime: 2
 --- !u!4 &1044117583
 Transform:
   m_ObjectHideFlags: 0
