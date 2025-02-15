@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     [SerializeField] private GameObject _gameOverCanvas;
+    [SerializeField] private GameObject _pauseCanvas;
 
     private void Awake()
     {
@@ -21,5 +22,23 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene("MenuGame");
+        Time.timeScale = 1f; // Load the Menu scene
+    }
+
+    public void PauseGame()
+    {
+        _pauseCanvas.gameObject.SetActive(true);  // Show the pause menu canvas
+        Time.timeScale = 0f; // Pause the game
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        _pauseCanvas.gameObject.SetActive(false); // Resume the game
     }
 }
