@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RedBird
+  m_Name: KingBird
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 7ce90551d4f24c942a2f461bef0579d8, type: 3}
+      value: {fileID: 21300000, guid: 281f2e8193d046e43b9a196d57e2397b, type: 3}
     - time: 0.13333334
       value: {fileID: 21300000, guid: 5eb31db14a88e694d8db0b9f072d9c4a, type: 3}
     - time: 0.28333333
-      value: {fileID: 21300000, guid: 865fb890d5d3a07419136993c71eeaed, type: 3}
+      value: {fileID: 21300000, guid: b84c8132ea9da964c9c9abbda5eb8aab, type: 3}
     - time: 0.41666666
-      value: {fileID: 21300000, guid: 5eb31db14a88e694d8db0b9f072d9c4a, type: 3}
+      value: {fileID: 21300000, guid: 2d23a12d4b484324cafeef494f6f88bc, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,10 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 7ce90551d4f24c942a2f461bef0579d8, type: 3}
+    - {fileID: 21300000, guid: 281f2e8193d046e43b9a196d57e2397b, type: 3}
     - {fileID: 21300000, guid: 5eb31db14a88e694d8db0b9f072d9c4a, type: 3}
-    - {fileID: 21300000, guid: 865fb890d5d3a07419136993c71eeaed, type: 3}
-    - {fileID: 21300000, guid: 5eb31db14a88e694d8db0b9f072d9c4a, type: 3}
+    - {fileID: 21300000, guid: b84c8132ea9da964c9c9abbda5eb8aab, type: 3}
+    - {fileID: 21300000, guid: 2d23a12d4b484324cafeef494f6f88bc, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SelectCharacter : MonoBehaviour
 {
-    private int _index;
+    [SerializeField] private int _index;
     [SerializeField] public GameObject[] characters;
+    [SerializeField] public GameObject[] charactersPrefabs;
+    public static GameObject selectCharacter;
 
     void Start()
     {
@@ -15,13 +16,18 @@ public class SelectCharacter : MonoBehaviour
 
     public void NextButton()
     {
-        if (_index < characters.Length - 1) _index++;
+        if (_index < characters.Length-1) _index++;
         this.SelectBird();
     }
     public void PrevButton()
     {
         if (_index > 0) _index--;
         this.SelectBird();
+    }
+
+    public void PlayButton()
+    {
+        SceneManager.LoadScene("GamePlay");
     }
 
     private void SelectBird()
@@ -31,6 +37,7 @@ public class SelectCharacter : MonoBehaviour
             if (_index == i)
             {
                 characters[i].SetActive(true);
+                selectCharacter = charactersPrefabs[i];
             }
             else
             {

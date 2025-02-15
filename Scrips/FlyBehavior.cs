@@ -10,6 +10,7 @@ public class FlyBehavior : NamMonoBehaviour
     [SerializeField] private float _velocity = 1.5f;
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private float _rotationSpeed = 10f;
+
     protected override void LoadComponent()
     {
         base.LoadComponent();
